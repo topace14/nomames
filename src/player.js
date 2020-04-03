@@ -5,6 +5,7 @@ export class Player {
         this.timestamp = timestamp;
         this.isActive = false;
         this.isMe = false;
+        this.myLives = 3;
         this.isDead = false;
     }
 
@@ -32,7 +33,9 @@ export class Player {
     copyAttributes(player) {
         this.name = name;
     }
-
+    setLives(lives){
+        this.myLives = lives
+    }
     getPlayers() {
         return this.players;
     }
